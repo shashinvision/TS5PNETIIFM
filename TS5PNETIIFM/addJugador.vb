@@ -53,10 +53,13 @@ Public Class addJugador
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim Conexion As New MySqlConnection(connString)
         Conexion.Open()
-        Dim Query As String = "INSERT INTO baby_calle.jugador
-                                (jug_nom, jug_apl, pos_id, eqp_id, jug_nro_cst, jug_fec_nac)
-                                VALUES('', '', 0, 0, 0, '');"
 
+        Dim Query As String = "INSERT INTO baby_calle.jugador
+                                    (jug_nom, jug_apl, pos_id, eqp_id, jug_nro_cst, jug_fec_nac)
+                                    VALUES(@nom, @apl, @pid, @eid, @cst, @nac);"
+        Dim posicionSeleccionada = extractorId(posicionCB.SelectedItem.ToString)
+        Dim equipoSeleccionado = extractorId(equiposCB.SelectedItem.ToString)
+        'MessageBox.Show(nombreTxt.Text.ToString + "-" + apellidoTxt.Text.ToString + "-" + posicionSeleccionada.ToString + "-" + equipoSeleccionado.ToString + "-" + camisetaTxt.Text.ToString + "-" + fechaNactxt.Text.ToString)
 
         If nombreTxt.Text = "" Or apellidoTxt.Text = "" Or posicionCB.SelectedIndex = -1 Or equiposCB.SelectedIndex = -1 Or camisetaTxt.Text = "" Or fechaNactxt.Text = "" Then
             MessageBox.Show("Debe llenar todos los campos para añadir un jugador")
@@ -64,18 +67,16 @@ Public Class addJugador
 
             Try
                 Dim comando As MySqlCommand = New MySqlCommand(Query, Conexion)
-                Dim posicionSeleccionada As Int32 = extractorId(posicionCB.SelectedItem.ToString)
-                Dim equipoSeleccionado As Int32 = extractorId(equiposCB.SelectedItem.ToString)
+                comando.Parameters.AddWithValue("@nom", nombreTxt.Text.ToString)
+                comando.Parameters.AddWithValue("@apl", apellidoTxt.Text.ToString)
+                comando.Parameters.AddWithValue("@pid", posicionSeleccionada.ToString)
+                comando.Parameters.AddWithValue("@eid", equipoSeleccionado.ToString)
+                comando.Parameters.AddWithValue("@cst", camisetaTxt.Text.ToString)
+                comando.Parameters.AddWithValue("@nac", fechaNactxt.Text.ToString)
 
-                comando.Parameters.AddWithValue("@jug_nom", nombreTxt.Text)
-                comando.Parameters.AddWithValue("@jug_apl", apellidoTxt.Text)
-                comando.Parameters.AddWithValue("@pos_id", posicionSeleccionada)
-                comando.Parameters.AddWithValue("@eqp_id", equipoSeleccionado)
-                comando.Parameters.AddWithValue("@jug_nro_cst", camisetaTxt.Text)
-                comando.Parameters.AddWithValue("@jug_fec_nac", fechaNactxt.Text)
 
                 If comando.ExecuteNonQuery() > 0 Then
-                    MessageBox.Show("Jugador " + nombreTxt.Text + " " + apellidoTxt.Text + "ingresado con éxito")
+                    MessageBox.Show("Jugador " + nombreTxt.Text.ToString + " " + apellidoTxt.Text.ToString + "ingresado con éxito")
                 End If
 
 
