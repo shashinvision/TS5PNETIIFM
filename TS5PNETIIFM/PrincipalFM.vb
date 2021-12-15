@@ -225,4 +225,12 @@ Public Class PrincipalFM
 
         Panel1.Visible = True
     End Sub
+
+    Private Sub AgregarUnNuevoJugadorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AgregarUnNuevoJugadorToolStripMenuItem.Click
+        Panel1.Visible = False
+
+        Dim addJugadorFR As New addJugador
+        addJugadorFR.MdiParent = Me
+        addJugadorFR.Show()
+    End Sub
 End Class
