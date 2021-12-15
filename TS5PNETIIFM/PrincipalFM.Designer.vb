@@ -29,27 +29,27 @@ Partial Class PrincipalFM
         Me.ModificarDatosDeUnJugadorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EliminarUnJugadorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.ListBox3 = New System.Windows.Forms.ListBox()
+        Me.regionCB = New System.Windows.Forms.ComboBox()
+        Me.equiposGB = New System.Windows.Forms.GroupBox()
+        Me.equiposLB = New System.Windows.Forms.Label()
+        Me.equiposRegionLB = New System.Windows.Forms.ListBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.posicionCB = New System.Windows.Forms.ComboBox()
+        Me.jugadoresGB = New System.Windows.Forms.GroupBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.ListBox2 = New System.Windows.Forms.ListBox()
+        Me.jugadoresPosicionLB = New System.Windows.Forms.ListBox()
         Me.detallesEquipoGB = New System.Windows.Forms.GroupBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.directorTecnicoTxt = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.jugadoresEquipoLB = New System.Windows.Forms.ListBox()
+        Me.equiposCB = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
+        Me.equiposGB.SuspendLayout()
+        Me.jugadoresGB.SuspendLayout()
         Me.detallesEquipoGB.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -58,7 +58,7 @@ Partial Class PrincipalFM
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenúToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(859, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(775, 24)
         Me.MenuStrip1.TabIndex = 16
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -97,64 +97,65 @@ Partial Class PrincipalFM
         '
         Me.Panel1.AutoScroll = True
         Me.Panel1.AutoSize = True
-        Me.Panel1.Controls.Add(Me.ComboBox3)
-        Me.Panel1.Controls.Add(Me.GroupBox2)
+        Me.Panel1.Controls.Add(Me.regionCB)
+        Me.Panel1.Controls.Add(Me.equiposGB)
         Me.Panel1.Controls.Add(Me.Label6)
-        Me.Panel1.Controls.Add(Me.ComboBox2)
-        Me.Panel1.Controls.Add(Me.GroupBox1)
+        Me.Panel1.Controls.Add(Me.posicionCB)
+        Me.Panel1.Controls.Add(Me.jugadoresGB)
         Me.Panel1.Controls.Add(Me.detallesEquipoGB)
-        Me.Panel1.Controls.Add(Me.ComboBox1)
+        Me.Panel1.Controls.Add(Me.equiposCB)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.Label7)
         Me.Panel1.Controls.Add(Me.MenuStrip1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(859, 887)
+        Me.Panel1.Size = New System.Drawing.Size(775, 887)
         Me.Panel1.TabIndex = 22
         '
-        'ComboBox3
+        'regionCB
         '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(32, 632)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(121, 23)
-        Me.ComboBox3.TabIndex = 23
+        Me.regionCB.FormattingEnabled = True
+        Me.regionCB.Location = New System.Drawing.Point(32, 632)
+        Me.regionCB.Name = "regionCB"
+        Me.regionCB.Size = New System.Drawing.Size(121, 23)
+        Me.regionCB.TabIndex = 23
+        Me.regionCB.Text = "-- selección --"
         '
-        'GroupBox2
+        'equiposGB
         '
-        Me.GroupBox2.BackColor = System.Drawing.Color.Transparent
-        Me.GroupBox2.Controls.Add(Me.Label4)
-        Me.GroupBox2.Controls.Add(Me.ListBox3)
-        Me.GroupBox2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.GroupBox2.Location = New System.Drawing.Point(196, 614)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(504, 251)
-        Me.GroupBox2.TabIndex = 25
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Detalle Equipos"
-        Me.GroupBox2.Visible = False
+        Me.equiposGB.BackColor = System.Drawing.Color.Transparent
+        Me.equiposGB.Controls.Add(Me.equiposLB)
+        Me.equiposGB.Controls.Add(Me.equiposRegionLB)
+        Me.equiposGB.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.equiposGB.Location = New System.Drawing.Point(196, 614)
+        Me.equiposGB.Name = "equiposGB"
+        Me.equiposGB.Size = New System.Drawing.Size(549, 251)
+        Me.equiposGB.TabIndex = 25
+        Me.equiposGB.TabStop = False
+        Me.equiposGB.Text = "Detalle Equipos"
+        Me.equiposGB.Visible = False
         '
-        'Label4
+        'equiposLB
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label4.Location = New System.Drawing.Point(20, 42)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(63, 15)
-        Me.Label4.TabIndex = 7
-        Me.Label4.Text = "Jugadores"
+        Me.equiposLB.AutoSize = True
+        Me.equiposLB.BackColor = System.Drawing.Color.Transparent
+        Me.equiposLB.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.equiposLB.Location = New System.Drawing.Point(20, 42)
+        Me.equiposLB.Name = "equiposLB"
+        Me.equiposLB.Size = New System.Drawing.Size(49, 15)
+        Me.equiposLB.TabIndex = 7
+        Me.equiposLB.Text = "Equipos"
         '
-        'ListBox3
+        'equiposRegionLB
         '
-        Me.ListBox3.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.ListBox3.FormattingEnabled = True
-        Me.ListBox3.ItemHeight = 15
-        Me.ListBox3.Location = New System.Drawing.Point(20, 73)
-        Me.ListBox3.Name = "ListBox3"
-        Me.ListBox3.Size = New System.Drawing.Size(443, 154)
-        Me.ListBox3.TabIndex = 4
+        Me.equiposRegionLB.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.equiposRegionLB.FormattingEnabled = True
+        Me.equiposRegionLB.ItemHeight = 15
+        Me.equiposRegionLB.Location = New System.Drawing.Point(20, 73)
+        Me.equiposRegionLB.Name = "equiposRegionLB"
+        Me.equiposRegionLB.Size = New System.Drawing.Size(506, 154)
+        Me.equiposRegionLB.TabIndex = 4
         '
         'Label6
         '
@@ -167,27 +168,28 @@ Partial Class PrincipalFM
         Me.Label6.TabIndex = 21
         Me.Label6.Text = "Posición"
         '
-        'ComboBox2
+        'posicionCB
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(32, 362)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(121, 23)
-        Me.ComboBox2.TabIndex = 20
+        Me.posicionCB.FormattingEnabled = True
+        Me.posicionCB.Location = New System.Drawing.Point(32, 362)
+        Me.posicionCB.Name = "posicionCB"
+        Me.posicionCB.Size = New System.Drawing.Size(121, 23)
+        Me.posicionCB.TabIndex = 20
+        Me.posicionCB.Text = "-- selección --"
         '
-        'GroupBox1
+        'jugadoresGB
         '
-        Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
-        Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Controls.Add(Me.ListBox2)
-        Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.GroupBox1.Location = New System.Drawing.Point(196, 344)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(504, 251)
-        Me.GroupBox1.TabIndex = 22
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Detalle Jugadores"
-        Me.GroupBox1.Visible = False
+        Me.jugadoresGB.BackColor = System.Drawing.Color.Transparent
+        Me.jugadoresGB.Controls.Add(Me.Label5)
+        Me.jugadoresGB.Controls.Add(Me.jugadoresPosicionLB)
+        Me.jugadoresGB.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.jugadoresGB.Location = New System.Drawing.Point(196, 344)
+        Me.jugadoresGB.Name = "jugadoresGB"
+        Me.jugadoresGB.Size = New System.Drawing.Size(549, 251)
+        Me.jugadoresGB.TabIndex = 22
+        Me.jugadoresGB.TabStop = False
+        Me.jugadoresGB.Text = "Detalle Jugadores"
+        Me.jugadoresGB.Visible = False
         '
         'Label5
         '
@@ -200,27 +202,27 @@ Partial Class PrincipalFM
         Me.Label5.TabIndex = 7
         Me.Label5.Text = "Jugadores"
         '
-        'ListBox2
+        'jugadoresPosicionLB
         '
-        Me.ListBox2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.ListBox2.FormattingEnabled = True
-        Me.ListBox2.ItemHeight = 15
-        Me.ListBox2.Location = New System.Drawing.Point(20, 73)
-        Me.ListBox2.Name = "ListBox2"
-        Me.ListBox2.Size = New System.Drawing.Size(443, 154)
-        Me.ListBox2.TabIndex = 4
+        Me.jugadoresPosicionLB.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.jugadoresPosicionLB.FormattingEnabled = True
+        Me.jugadoresPosicionLB.ItemHeight = 15
+        Me.jugadoresPosicionLB.Location = New System.Drawing.Point(20, 73)
+        Me.jugadoresPosicionLB.Name = "jugadoresPosicionLB"
+        Me.jugadoresPosicionLB.Size = New System.Drawing.Size(506, 154)
+        Me.jugadoresPosicionLB.TabIndex = 4
         '
         'detallesEquipoGB
         '
         Me.detallesEquipoGB.BackColor = System.Drawing.Color.Transparent
         Me.detallesEquipoGB.Controls.Add(Me.Label3)
-        Me.detallesEquipoGB.Controls.Add(Me.TextBox1)
+        Me.detallesEquipoGB.Controls.Add(Me.directorTecnicoTxt)
         Me.detallesEquipoGB.Controls.Add(Me.Label2)
-        Me.detallesEquipoGB.Controls.Add(Me.ListBox1)
+        Me.detallesEquipoGB.Controls.Add(Me.jugadoresEquipoLB)
         Me.detallesEquipoGB.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.detallesEquipoGB.Location = New System.Drawing.Point(196, 74)
         Me.detallesEquipoGB.Name = "detallesEquipoGB"
-        Me.detallesEquipoGB.Size = New System.Drawing.Size(504, 251)
+        Me.detallesEquipoGB.Size = New System.Drawing.Size(549, 251)
         Me.detallesEquipoGB.TabIndex = 19
         Me.detallesEquipoGB.TabStop = False
         Me.detallesEquipoGB.Text = "Detalles Equipo"
@@ -231,19 +233,18 @@ Partial Class PrincipalFM
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label3.Location = New System.Drawing.Point(382, 42)
+        Me.Label3.Location = New System.Drawing.Point(258, 42)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(99, 15)
+        Me.Label3.Size = New System.Drawing.Size(102, 15)
         Me.Label3.TabIndex = 9
-        Me.Label3.Text = "Director Técnico"
+        Me.Label3.Text = "Director Técnico:"
         '
-        'TextBox1
+        'directorTecnicoTxt
         '
-        Me.TextBox1.Enabled = False
-        Me.TextBox1.Location = New System.Drawing.Point(382, 73)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 23)
-        Me.TextBox1.TabIndex = 8
+        Me.directorTecnicoTxt.Location = New System.Drawing.Point(366, 42)
+        Me.directorTecnicoTxt.Name = "directorTecnicoTxt"
+        Me.directorTecnicoTxt.Size = New System.Drawing.Size(160, 23)
+        Me.directorTecnicoTxt.TabIndex = 8
         '
         'Label2
         '
@@ -256,23 +257,24 @@ Partial Class PrincipalFM
         Me.Label2.TabIndex = 7
         Me.Label2.Text = "Jugadores"
         '
-        'ListBox1
+        'jugadoresEquipoLB
         '
-        Me.ListBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.ItemHeight = 15
-        Me.ListBox1.Location = New System.Drawing.Point(20, 73)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(356, 154)
-        Me.ListBox1.TabIndex = 4
+        Me.jugadoresEquipoLB.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.jugadoresEquipoLB.FormattingEnabled = True
+        Me.jugadoresEquipoLB.ItemHeight = 15
+        Me.jugadoresEquipoLB.Location = New System.Drawing.Point(20, 73)
+        Me.jugadoresEquipoLB.Name = "jugadoresEquipoLB"
+        Me.jugadoresEquipoLB.Size = New System.Drawing.Size(506, 154)
+        Me.jugadoresEquipoLB.TabIndex = 4
         '
-        'ComboBox1
+        'equiposCB
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(32, 92)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 23)
-        Me.ComboBox1.TabIndex = 17
+        Me.equiposCB.FormattingEnabled = True
+        Me.equiposCB.Location = New System.Drawing.Point(32, 92)
+        Me.equiposCB.Name = "equiposCB"
+        Me.equiposCB.Size = New System.Drawing.Size(121, 23)
+        Me.equiposCB.TabIndex = 17
+        Me.equiposCB.Text = "-- selección --"
         '
         'Label1
         '
@@ -302,7 +304,7 @@ Partial Class PrincipalFM
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.AutoSize = True
-        Me.ClientSize = New System.Drawing.Size(859, 887)
+        Me.ClientSize = New System.Drawing.Size(775, 887)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "PrincipalFM"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -311,10 +313,10 @@ Partial Class PrincipalFM
         Me.MenuStrip1.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
+        Me.equiposGB.ResumeLayout(False)
+        Me.equiposGB.PerformLayout()
+        Me.jugadoresGB.ResumeLayout(False)
+        Me.jugadoresGB.PerformLayout()
         Me.detallesEquipoGB.ResumeLayout(False)
         Me.detallesEquipoGB.PerformLayout()
         Me.ResumeLayout(False)
@@ -329,21 +331,21 @@ Partial Class PrincipalFM
     Friend WithEvents ModificarDatosDeUnJugadorToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EliminarUnJugadorToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents ComboBox3 As ComboBox
-    Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents ListBox3 As ListBox
+    Friend WithEvents regionCB As ComboBox
+    Friend WithEvents equiposGB As GroupBox
+    Friend WithEvents equiposLB As Label
+    Friend WithEvents equiposRegionLB As ListBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents posicionCB As ComboBox
+    Friend WithEvents jugadoresGB As GroupBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents ListBox2 As ListBox
+    Friend WithEvents jugadoresPosicionLB As ListBox
     Friend WithEvents detallesEquipoGB As GroupBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents directorTecnicoTxt As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents ListBox1 As ListBox
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents jugadoresEquipoLB As ListBox
+    Friend WithEvents equiposCB As ComboBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label7 As Label
 End Class
