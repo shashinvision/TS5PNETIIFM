@@ -207,4 +207,22 @@ Public Class PrincipalFM
         End Try
 
     End Sub
+
+
+    Private Sub ConsultarPorUnJugadorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultarPorUnJugadorToolStripMenuItem.Click
+        Panel1.Visible = False
+
+        Dim consultaJugadorFR As New ConsultaJugador
+        consultaJugadorFR.MdiParent = Me
+        consultaJugadorFR.Show()
+    End Sub
+
+    Private Sub ContenidoPrincipalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ContenidoPrincipalToolStripMenuItem.Click
+        contenidoPrincipal()
+    End Sub
+
+    Public Sub contenidoPrincipal()
+
+        Panel1.Visible = True
+    End Sub
 End Class
