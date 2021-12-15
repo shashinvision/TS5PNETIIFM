@@ -33,8 +33,8 @@ Partial Class addJugador
         Me.apellidoTxt = New System.Windows.Forms.TextBox()
         Me.equiposCB = New System.Windows.Forms.ComboBox()
         Me.nombreTxt = New System.Windows.Forms.TextBox()
-        Me.addJugadorBtn = New System.Windows.Forms.Button()
         Me.posicionCB = New System.Windows.Forms.ComboBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label7
@@ -127,15 +127,6 @@ Partial Class addJugador
         Me.nombreTxt.Size = New System.Drawing.Size(166, 23)
         Me.nombreTxt.TabIndex = 14
         '
-        'addJugadorBtn
-        '
-        Me.addJugadorBtn.Location = New System.Drawing.Point(134, 300)
-        Me.addJugadorBtn.Name = "addJugadorBtn"
-        Me.addJugadorBtn.Size = New System.Drawing.Size(166, 23)
-        Me.addJugadorBtn.TabIndex = 28
-        Me.addJugadorBtn.Text = "Añadir"
-        Me.addJugadorBtn.UseVisualStyleBackColor = True
-        '
         'posicionCB
         '
         Me.posicionCB.FormattingEnabled = True
@@ -144,13 +135,22 @@ Partial Class addJugador
         Me.posicionCB.Size = New System.Drawing.Size(166, 23)
         Me.posicionCB.TabIndex = 29
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(149, 295)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(129, 23)
+        Me.Button1.TabIndex = 30
+        Me.Button1.Text = "Añadir Jugador"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'addJugador
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(490, 354)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.posicionCB)
-        Me.Controls.Add(Me.addJugadorBtn)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
@@ -181,6 +181,6 @@ Partial Class addJugador
     Friend WithEvents apellidoTxt As TextBox
     Friend WithEvents equiposCB As ComboBox
     Friend WithEvents nombreTxt As TextBox
-    Friend WithEvents addJugadorBtn As Button
     Friend WithEvents posicionCB As ComboBox
+    Friend WithEvents Button1 As Button
 End Class
