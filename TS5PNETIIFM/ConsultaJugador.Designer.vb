@@ -22,14 +22,14 @@ Partial Class ConsultaJugador
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.nombreTxt = New System.Windows.Forms.TextBox()
         Me.jugadoresCB = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.apellidoTxt = New System.Windows.Forms.TextBox()
+        Me.posicionTxt = New System.Windows.Forms.TextBox()
+        Me.equipoTxt = New System.Windows.Forms.TextBox()
+        Me.camisetaTxt = New System.Windows.Forms.TextBox()
+        Me.fechaNactxt = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -38,12 +38,12 @@ Partial Class ConsultaJugador
         Me.Label7 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'TextBox1
+        'nombreTxt
         '
-        Me.TextBox1.Location = New System.Drawing.Point(208, 65)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 23)
-        Me.TextBox1.TabIndex = 0
+        Me.nombreTxt.Location = New System.Drawing.Point(208, 65)
+        Me.nombreTxt.Name = "nombreTxt"
+        Me.nombreTxt.Size = New System.Drawing.Size(100, 23)
+        Me.nombreTxt.TabIndex = 0
         '
         'jugadoresCB
         '
@@ -62,40 +62,40 @@ Partial Class ConsultaJugador
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Jugador"
         '
-        'TextBox2
+        'apellidoTxt
         '
-        Me.TextBox2.Location = New System.Drawing.Point(333, 65)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 23)
-        Me.TextBox2.TabIndex = 3
+        Me.apellidoTxt.Location = New System.Drawing.Point(333, 65)
+        Me.apellidoTxt.Name = "apellidoTxt"
+        Me.apellidoTxt.Size = New System.Drawing.Size(100, 23)
+        Me.apellidoTxt.TabIndex = 3
         '
-        'TextBox3
+        'posicionTxt
         '
-        Me.TextBox3.Location = New System.Drawing.Point(208, 146)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 23)
-        Me.TextBox3.TabIndex = 4
+        Me.posicionTxt.Location = New System.Drawing.Point(208, 146)
+        Me.posicionTxt.Name = "posicionTxt"
+        Me.posicionTxt.Size = New System.Drawing.Size(100, 23)
+        Me.posicionTxt.TabIndex = 4
         '
-        'TextBox4
+        'equipoTxt
         '
-        Me.TextBox4.Location = New System.Drawing.Point(333, 146)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 23)
-        Me.TextBox4.TabIndex = 5
+        Me.equipoTxt.Location = New System.Drawing.Point(333, 146)
+        Me.equipoTxt.Name = "equipoTxt"
+        Me.equipoTxt.Size = New System.Drawing.Size(100, 23)
+        Me.equipoTxt.TabIndex = 5
         '
-        'TextBox5
+        'camisetaTxt
         '
-        Me.TextBox5.Location = New System.Drawing.Point(208, 240)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(100, 23)
-        Me.TextBox5.TabIndex = 6
+        Me.camisetaTxt.Location = New System.Drawing.Point(208, 240)
+        Me.camisetaTxt.Name = "camisetaTxt"
+        Me.camisetaTxt.Size = New System.Drawing.Size(100, 23)
+        Me.camisetaTxt.TabIndex = 6
         '
-        'TextBox6
+        'fechaNactxt
         '
-        Me.TextBox6.Location = New System.Drawing.Point(333, 240)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(100, 23)
-        Me.TextBox6.TabIndex = 7
+        Me.fechaNactxt.Location = New System.Drawing.Point(333, 240)
+        Me.fechaNactxt.Name = "fechaNactxt"
+        Me.fechaNactxt.Size = New System.Drawing.Size(100, 23)
+        Me.fechaNactxt.TabIndex = 7
         '
         'Label2
         '
@@ -162,14 +162,14 @@ Partial Class ConsultaJugador
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TextBox6)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.fechaNactxt)
+        Me.Controls.Add(Me.camisetaTxt)
+        Me.Controls.Add(Me.equipoTxt)
+        Me.Controls.Add(Me.posicionTxt)
+        Me.Controls.Add(Me.apellidoTxt)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.jugadoresCB)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.nombreTxt)
         Me.Name = "ConsultaJugador"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ConsultaJugador"
@@ -178,14 +178,14 @@ Partial Class ConsultaJugador
 
     End Sub
 
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents nombreTxt As TextBox
     Friend WithEvents jugadoresCB As ComboBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents apellidoTxt As TextBox
+    Friend WithEvents posicionTxt As TextBox
+    Friend WithEvents equipoTxt As TextBox
+    Friend WithEvents camisetaTxt As TextBox
+    Friend WithEvents fechaNactxt As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
