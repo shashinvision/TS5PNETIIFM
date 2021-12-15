@@ -233,4 +233,12 @@ Public Class PrincipalFM
         addJugadorFR.MdiParent = Me
         addJugadorFR.Show()
     End Sub
+
+    Private Sub ModificarDatosDeUnJugadorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ModificarDatosDeUnJugadorToolStripMenuItem.Click
+        Panel1.Visible = False
+
+        Dim editJugadorFR As New EditarJugador
+        editJugadorFR.MdiParent = Me
+        editJugadorFR.Show()
+    End Sub
 End Class
