@@ -125,4 +125,46 @@ Public Class EditarJugador
             Conexion.Close()
         End Try
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim id = extractorId(jugadoresCB.SelectedItem.ToString)
+        Dim Conexion As New MySqlConnection(connString)
+        Conexion.Open()
+
+        Dim Query As String = "UPDATE baby_calle.jugador
+                                SET jug_nom=@jnom, jug_apl=@japl, pos_id=@pid, eqp_id=@eid, jug_nro_cst=@cst, jug_fec_nac=@nac
+                                WHERE jug_id=@id;"
+
+        Dim posicionSeleccionada = extractorId(posicionCB.SelectedItem.ToString)
+        Dim equipoSeleccionado = extractorId(equiposCB.SelectedItem.ToString)
+        'MessageBox.Show(nombreTxt.Text.ToString + "-" + apellidoTxt.Text.ToString + "-" + posicionSeleccionada.ToString + "-" + equipoSeleccionado.ToString + "-" + camisetaTxt.Text.ToString + "-" + fechaNactxt.Text.ToString)
+
+        If nombreTxt.Text = "" Or apellidoTxt.Text = "" Or posicionCB.SelectedIndex = -1 Or equiposCB.SelectedIndex = -1 Or camisetaTxt.Text = "" Or fechaNactxt.Text = "" Then
+            MessageBox.Show("Debe llenar todos los campos para añadir un jugador")
+        Else
+
+            Try
+                Dim comando As MySqlCommand = New MySqlCommand(Query, Conexion)
+                comando.Parameters.AddWithValue("@jnom", nombreTxt.Text.ToString)
+                comando.Parameters.AddWithValue("@japl", apellidoTxt.Text.ToString)
+                comando.Parameters.AddWithValue("@pid", posicionSeleccionada.ToString)
+                comando.Parameters.AddWithValue("@eid", equipoSeleccionado.ToString)
+                comando.Parameters.AddWithValue("@cst", camisetaTxt.Text.ToString)
+                comando.Parameters.AddWithValue("@nac", fechaNactxt.Text.ToString)
+                comando.Parameters.AddWithValue("@id", id.ToString)
+
+
+                If comando.ExecuteNonQuery() > 0 Then
+                    MessageBox.Show("Jugador " + nombreTxt.Text.ToString + " " + apellidoTxt.Text.ToString + " editado con éxito")
+                    jugadoresComboBox()
+                End If
+
+            Catch ex As Exception
+                MessageBox.Show("Error ingreso de jugador: " + ex.Message)
+            Finally
+                Conexion.Close()
+            End Try
+
+        End If
+    End Sub
 End Class

@@ -76,7 +76,7 @@ Public Class addJugador
 
 
                 If comando.ExecuteNonQuery() > 0 Then
-                    MessageBox.Show("Jugador " + nombreTxt.Text.ToString + " " + apellidoTxt.Text.ToString + "ingresado con éxito")
+                    MessageBox.Show("Jugador " + nombreTxt.Text.ToString + " " + apellidoTxt.Text.ToString + " ingresado con éxito")
                 End If
 
 

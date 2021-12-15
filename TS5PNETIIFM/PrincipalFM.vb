@@ -241,4 +241,12 @@ Public Class PrincipalFM
         editJugadorFR.MdiParent = Me
         editJugadorFR.Show()
     End Sub
+
+    Private Sub EliminarUnJugadorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EliminarUnJugadorToolStripMenuItem.Click
+        Panel1.Visible = False
+
+        Dim elimarJugadorFR As New EliminarJugador
+        elimarJugadorFR.MdiParent = Me
+        elimarJugadorFR.Show()
+    End Sub
 End Class
