@@ -57,8 +57,7 @@ Public Class addJugador
         Dim Query As String = "INSERT INTO baby_calle.jugador
                                     (jug_nom, jug_apl, pos_id, eqp_id, jug_nro_cst, jug_fec_nac)
                                     VALUES(@nom, @apl, @pid, @eid, @cst, @nac);"
-        Dim posicionSeleccionada = extractorId(posicionCB.SelectedItem.ToString)
-        Dim equipoSeleccionado = extractorId(equiposCB.SelectedItem.ToString)
+
         'MessageBox.Show(nombreTxt.Text.ToString + "-" + apellidoTxt.Text.ToString + "-" + posicionSeleccionada.ToString + "-" + equipoSeleccionado.ToString + "-" + camisetaTxt.Text.ToString + "-" + fechaNactxt.Text.ToString)
 
         If nombreTxt.Text = "" Or apellidoTxt.Text = "" Or posicionCB.SelectedIndex = -1 Or equiposCB.SelectedIndex = -1 Or camisetaTxt.Text = "" Or fechaNactxt.Text = "" Then
@@ -66,6 +65,8 @@ Public Class addJugador
         Else
 
             Try
+                Dim posicionSeleccionada = extractorId(posicionCB.SelectedItem.ToString)
+                Dim equipoSeleccionado = extractorId(equiposCB.SelectedItem.ToString)
                 Dim comando As MySqlCommand = New MySqlCommand(Query, Conexion)
                 comando.Parameters.AddWithValue("@nom", nombreTxt.Text.ToString)
                 comando.Parameters.AddWithValue("@apl", apellidoTxt.Text.ToString)
